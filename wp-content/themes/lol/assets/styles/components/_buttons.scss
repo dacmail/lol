@@ -1,22 +1,17 @@
 .btn-primary {
-  padding: 20px 50px;
-  color: $white;
-  border-radius: 32px;
-  background-color: $primary;
-  border: 0px;
+  border-radius: 0px;
+  border: 1px solid $brand;
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.0;
+  color: $brand;
   text-transform: uppercase;
-  transition: background-color 0.3s ease-in;
+  padding: 22px 30px;
+  background: transparent;
   &:hover {
-    background-color: $black;
+    background: $brand;
     color: $white;
-  }
-}
-.btn-alt {
-  @extend .btn-primary;
-  background-color: $white;
-  color: $primary;
-  &:hover {
-    color: $white;
-    background-color: $primary;
+    border-color: $brand;
   }
 }
