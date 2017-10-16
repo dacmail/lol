@@ -9,6 +9,5 @@
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
     "popper.js": "^1.12.3",
-    "owl.carousel": "^2.2.1"
   }
 }
