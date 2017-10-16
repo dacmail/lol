@@ -18,8 +18,36 @@ textarea, input, button {
   line-height: 1.0;
   text-align: left;
   color: $dark;
+  text-transform: uppercase;
+  margin: 0px 0px 50px 0px;
   a {
     color: $dark;
     text-decoration: none;
   }
+}
+.close-btn {
+  display: block;
+  text-indent: -99999px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -7px;
+    width: 45px;
+    border-top: 1px solid $dark;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -5px;
+    width: 45px;
+    border-top: 1px solid $dark;
+    transform: rotate(45deg);
+  }
+
 }
