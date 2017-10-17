@@ -90,3 +90,22 @@
     </div>
   </section>
 <?php endif; ?>
+
+
+<?php $contactform = get_field('contact_form'); ?>
+<?php if ($contactform): ?>
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <h2 class="sec-title"><?php esc_html_e('Contacto', 'ungrynerd'); ?></h2>
+      <div class="contact__wrapper">
+        <div class="contact__text">
+          <?php the_field('contact_text') ?>
+        </div>
+        <div class="contact__form">
+          <?php echo do_shortcode($contactform); ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<?php endif ?>
