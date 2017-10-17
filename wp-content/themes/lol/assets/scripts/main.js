@@ -40,6 +40,11 @@
           $('.services__tabs__tab').removeClass('active');
           $('.services__tabs-content__tab').removeClass('active');
         });
+
+        $('.team__member__bio').on('click', '.open-close-bio', function(event) {
+          event.preventDefault();
+          $(this).closest('.team__member__bio').toggleClass('active');
+        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

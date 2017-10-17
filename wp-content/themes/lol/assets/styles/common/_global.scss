@@ -11,6 +11,10 @@ textarea, input, button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .sec-title {
   font-family: Montserrat;
   font-size: 32px;
@@ -25,6 +29,11 @@ textarea, input, button {
     text-decoration: none;
   }
 }
+
+a {
+  color: $brand;
+}
+
 .close-btn {
   display: block;
   text-indent: -99999px;
