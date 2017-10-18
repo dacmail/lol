@@ -8,9 +8,14 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 60px;
+    @media (max-width: $mq-sm) {
+      flex-flow: column;
+      align-items: center;
+    }
     &:first-of-type {
       margin-bottom: 100px;
     }
+
   }
   &__logo {
     max-width: 61px;
@@ -34,11 +39,20 @@
       flex-wrap: wrap;
       align-items: flex-start;
       list-style: none;
+      @media (max-width: $mq-sm) {
+        flex-flow: column;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+        padding: 0px;
+      }
       > .menu-item {
         text-transform: uppercase;
         text-align: right;
         margin-bottom: 10px;
         padding: 0px 0px 0px 40px;
+        @media (max-width: $mq-sm) {
+          padding: 0px;
+        }
         a {
           font-size: 16px;
           font-weight: 500;

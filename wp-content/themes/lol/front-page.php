@@ -19,6 +19,7 @@
       <?php while (have_rows('services')): the_row(); ?>
           <article class="services__tabs-content__tab" id="<?php echo sanitize_title(get_sub_field('service_title')) ?>">
             <?php echo wp_get_attachment_image(get_sub_field('service_icon'), 'big') ?>
+            <h3 class="services__tabs-content__tab__name"><?php the_sub_field('service_title'); ?></h3>
             <div class="services__tabs-content__tab__content">
               <?php the_sub_field('service_content'); ?>
             </div>

@@ -19,8 +19,8 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-        $('a[href*="#"]').on('click', function() {
-          if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+        $('.header a[href*="#"]').on('click', function() {
+          if (this.hash.length>1 && location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var $target = $(this.hash);
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {

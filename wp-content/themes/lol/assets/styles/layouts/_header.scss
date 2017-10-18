@@ -93,6 +93,10 @@
     margin: 250px auto;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: $mq-sm) {
+      flex-flow: column;
+      align-items: center;
+    }
   }
   &__title {
     width: 65%;
@@ -104,12 +108,24 @@
     color: $white;
     padding-right: 30px;
     margin-top: 0px;
+    @media (max-width: $mq-sm) {
+      padding-right: 0px;
+      text-align: center;
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
   }
   &__image {
     width: 35%;
     flex: 0 0 35%;
     text-align: left;
     padding-top: 10px;
+    @media (max-width: $mq-sm) {
+      width: 100%;
+      flex: 0 0 100%;
+      text-align: center;
+    }
     img {
       width: 100%;
       height: auto;
