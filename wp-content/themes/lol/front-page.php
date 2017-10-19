@@ -6,25 +6,29 @@
     <h2 class="sec-title"><?php esc_html_e('Servicios', 'ungrynerd'); ?></h2>
 
     <ul class="services__tabs">
+      <?php $i = 0; ?>
       <?php while (have_rows('services')): the_row(); ?>
-          <li class="services__tabs__tab">
-            <a href="#<?php echo sanitize_title(get_sub_field('service_title')) ?>">
-              <?php echo wp_get_attachment_image(get_sub_field('service_icon'), 'big') ?>
-              <?php the_sub_field('service_title'); ?>
-            </a>
-          </li>
+        <li class="services__tabs__tab <?php echo $i==0 ? 'active' : '' ?>">
+          <a href="#<?php echo sanitize_title(get_sub_field('service_title')) ?>">
+            <?php echo wp_get_attachment_image(get_sub_field('service_icon'), 'big') ?>
+            <?php the_sub_field('service_title'); ?>
+          </a>
+        </li>
+        <?php $i++; ?>
       <?php endwhile; ?>
     </ul>
     <div class="services__tabs-content">
+      <?php $i = 0; ?>
       <?php while (have_rows('services')): the_row(); ?>
-          <article class="services__tabs-content__tab" id="<?php echo sanitize_title(get_sub_field('service_title')) ?>">
-            <?php echo wp_get_attachment_image(get_sub_field('service_icon'), 'big') ?>
-            <h3 class="services__tabs-content__tab__name"><?php the_sub_field('service_title'); ?></h3>
-            <div class="services__tabs-content__tab__content">
-              <?php the_sub_field('service_content'); ?>
-            </div>
-            <a href="#" class="close-btn">&times;</a>
-          </article>
+        <article class="services__tabs-content__tab <?php echo $i==0 ? 'active' : '' ?>" id="<?php echo sanitize_title(get_sub_field('service_title')) ?>">
+          <?php echo wp_get_attachment_image(get_sub_field('service_icon'), 'big') ?>
+          <h3 class="services__tabs-content__tab__name"><?php the_sub_field('service_title'); ?></h3>
+          <div class="services__tabs-content__tab__content">
+            <?php the_sub_field('service_content'); ?>
+          </div>
+          <a href="#" class="close-btn">&times;</a>
+        </article>
+        <?php $i++; ?>
       <?php endwhile; ?>
     </div>
   </div>
@@ -64,7 +68,7 @@
             <h3 class="team__member__name"><?php the_sub_field('member_name'); ?></h3>
             <h3 class="team__member__position"><?php the_sub_field('member_position'); ?></h3>
             <a href="mailto:<?php echo esc_url(get_sub_field('member_mail')); ?>" class="team__member__email"><?php the_sub_field('member_mail'); ?></a>
-            <div class="team__member__bio">
+            <div class="team__member__bio active">
               <div class="team__member__social">
                 <a target="_blank" href="<?php echo esc_url(get_sub_field('member_twitter')); ?>"><?php echo Extras\ungrynerd_svg('icon-twitter'); ?></a>
                 <a target="_blank" href="<?php echo esc_url(get_sub_field('member_facebook')); ?>"><?php echo Extras\ungrynerd_svg('icon-facebook'); ?></a>
