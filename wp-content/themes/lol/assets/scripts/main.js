@@ -42,7 +42,7 @@
         $('.services__tabs__tab').on('click', 'a', function(event) {
           event.preventDefault();
           $('.services__tabs__tab').removeClass('active');
-          $(this).closest('.services__tabs__tab').addClass('active')
+          $(this).closest('.services__tabs__tab').addClass('active');
           $('.services__tabs-content__tab').removeClass('active');
           $('.services__tabs-content__tab' + $(this).attr('href')).addClass('active');
         });
