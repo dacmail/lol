@@ -32,6 +32,11 @@ img {
 
 a {
   color: $brand;
+  font-weight: 500;
+  &:hover {
+    color: $brand;
+    text-decoration: underline;
+  }
 }
 
 .close-btn {

@@ -18,10 +18,9 @@
         'container_class' => 'footer__nav',
         'items_wrap' => '<ul id="%1$s" class="%2$s">
                           %3$s
-                          <li class="menu-item icon"><a href="#twitter" target="_blank">' . Extras\ungrynerd_svg('icon-twitter') . '</a></li>
-                          <li class="menu-item icon"><a href="#facebook" target="_blank">' . Extras\ungrynerd_svg('icon-facebook') . '</a></li>
-                          <li class="menu-item icon"><a href="#youtube" target="_blank">' . Extras\ungrynerd_svg('icon-youtube') . '</a></li>
-                          <li class="menu-item icon"><a href="#linkedin" target="_blank">' . Extras\ungrynerd_svg('icon-linkedin') . '</a></li>
+                          <li class="menu-item icon"><a href="https://twitter.com/LeagueLawyers" target="_blank">' . Extras\ungrynerd_svg('icon-twitter') . '</a></li>
+                          <li class="menu-item icon"><a href="https://www.facebook.com/leagueoflawyers" target="_blank">' . Extras\ungrynerd_svg('icon-facebook') . '</a></li>
+                          <li class="menu-item icon"><a href="https://www.linkedin.com/company/18244866/" target="_blank">' . Extras\ungrynerd_svg('icon-linkedin') . '</a></li>
                         </ul>'
       ]);
     endif;

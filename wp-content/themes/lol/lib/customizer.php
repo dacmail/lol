@@ -17,10 +17,20 @@ function customize_register($wp_customize) {
     'sanitize_callback' => 'esc_url_raw',
   ) );
 
+  $wp_customize->add_setting( 'alt_logo', array(
+    'sanitize_callback' => 'esc_url_raw',
+  ) );
+
   $wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'ungrynerd_footer_logo', array(
     'label'    => __( 'Logo', 'ungrynerd' ),
     'section'  => 'ungrynerd_footer_section',
     'settings' => 'ungrynerd_footer',
+  ) ) );
+
+  $wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'ungrynerd_alt_logo', array(
+    'label'    => __( 'Logo alternativo', 'ungrynerd' ),
+    'section'  => 'title_tagline',
+    'settings' => 'alt_logo',
   ) ) );
 
   $wp_customize->get_setting('blogname')->transport = 'postMessage';

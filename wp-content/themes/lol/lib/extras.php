@@ -15,6 +15,11 @@ function body_class($classes) {
     }
   }
 
+  if (is_front_page()) {
+    unset($classes);
+    $classes[] = 'home';
+  }
+
   // Add class if sidebar is active
   if (Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';

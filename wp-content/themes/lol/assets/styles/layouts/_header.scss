@@ -5,8 +5,8 @@
   background-size: cover;
   .custom-logo-link {
     img {
-      max-width: 61px;
-      height: auto;
+      max-height: 52px;
+      width: auto;
     }
   }
   .navbar-toggler {
@@ -62,11 +62,15 @@
     padding: 0px;
     width: 320px;
     max-width: 100%;
-    background-color: $black;
+    background-color: rgba($black, .9);
     position: absolute;
     right: 0px;
     top: 100%;
     padding: 10px 50px;
+    height: 697px;
+    @media (max-width: $mq-sm) {
+      height: 600px;
+    }
     .menu-item {
       text-align: right;
       a {
@@ -96,6 +100,8 @@
     @media (max-width: $mq-sm) {
       flex-flow: column;
       align-items: center;
+      margin: 100px auto;
+      background-size: contain;
     }
   }
   &__title {
