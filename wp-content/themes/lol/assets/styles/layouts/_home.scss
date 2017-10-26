@@ -295,6 +295,8 @@
     list-style: none;
     padding: 0px 15px 0px 30px;
     margin: 0px;
+    width: 32%;
+    flex: 0 0 32%;
     @media (max-width: $mq-sm) {
       width: 100%;
       flex: 0 0 100%;
